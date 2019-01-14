@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
 
 namespace ChatClient
 {
@@ -6,7 +10,8 @@ namespace ChatClient
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var client = new Client();
+            client.BeginChat();
         }
     }
 }
